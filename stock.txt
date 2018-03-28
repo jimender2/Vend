@@ -1,0 +1,10 @@
+M&Ms
+0.75
+Chips
+1.16
+Peppermint gum
+0.32
+Soda
+1.38
+Candy Bar
+0.84
