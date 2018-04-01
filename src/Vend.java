@@ -89,7 +89,9 @@ public class Vend {
 		
 	}
 	
-	public static void 
+	public static void calculateCost(int money, String item, float cost) {
+		
+	}
 	
 	public static String userChoice (Scanner scan) {
 		int choiceFromUser;
