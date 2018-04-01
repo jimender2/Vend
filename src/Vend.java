@@ -85,13 +85,26 @@ public class Vend {
 		}
 		
 		//Test to make sure this is working
-		System.out.println(money);
 		
 	}
 	
-	public static void calculateCost(int money, String item, float cost) {
+	public static void calculateCost(int convertMoney, String item, float cost) {
+		float money;
+		int changeMoney;
+		money = convertMoney / 100;
+		if (money < cost) {
+			System.out.println("You entered insufficient funds to purchase "
+					+ "the " + item + ".");
+		} else {
+			money = money - cost;			
+		}
 		
+		changeMoney = money * 100;
+		
+		changeMoney = findChange(changeMoney, 25);
 	}
+	
+	public static int
 	
 	public static String userChoice (Scanner scan) {
 		int choiceFromUser;
