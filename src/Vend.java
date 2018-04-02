@@ -104,7 +104,10 @@ public class Vend {
 		changeMoney = findChange(changeMoney, 25);
 	}
 	
-	public static int
+	public static int findChange(int changeMoney, int denomination) {
+		
+		return change;
+	}
 	
 	public static String userChoice (Scanner scan) {
 		int choiceFromUser;
