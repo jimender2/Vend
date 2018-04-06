@@ -143,62 +143,6 @@ public class Vend {
 		System.out.println("Please enter the amount of money "
 				+ "deposited (in dollars) : $");
 		
-		//
-		//
-		//
-		//
-		//
-		//
-		//
-		//
-		//
-		//
-		//
-		//
-		//
-		//
-		//
-		//
-		//
-		//
-		//
-		//
-		//
-		//
-		//
-		//
-		//
-		//
-		//
-		//
-		//GET HER TO SEE IF THIS IS OK
-		//
-		//
-		//
-		//
-		//
-		//
-		//
-		//
-		//
-		//
-		//
-		//
-		//
-		//
-		//
-		//
-		//
-		//
-		//
-		//
-		//
-		//
-		//
-		//
-		//
-		//
-		//
 		money = (int) (scan.nextFloat() * 100);
 		return money;
 	}
