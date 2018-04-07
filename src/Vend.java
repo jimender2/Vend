@@ -91,13 +91,15 @@ public class Vend {
 	}
 	
 	public static void calculateCost(int money, String item, float cost) {
-		int changeMoney;
-		convertMoney = money / 100;
+		int costConvert;
+		money = money / 100;
+		
 		if (money < cost) {
 			System.out.println("You entered insufficient funds to purchase "
 					+ "the " + item + ".");
 		} else {
-			money = money - cost;			
+			costConvert = (int) (cost * 100);
+			money = money - costConvert;			
 		}
 		
 		changeMoney = money * 100;
