@@ -51,12 +51,12 @@ public class Vend {
 	    
 	    //Close input
 		input.close();
-		
-		System.out.printf("1: " + itemOne + " $" + costOne + "\n");
-		System.out.printf("2: " + itemTwo + " $" + costTwo + "\n");
-		System.out.printf("3: " + itemThree + " $" + costThree + "\n");
-		System.out.printf("4: " + itemFour + " $" + costFour + "\n");
-		System.out.printf("5: " + itemFive + " $" + costFive + "\n");
+				
+		System.out.printf("1: %-20s $%.2f \n", itemOne, costOne);
+		System.out.printf("2: %-20s $%.2f \n", itemTwo, costTwo);
+		System.out.printf("3: %-20s $%.2f \n", itemThree, costThree);
+		System.out.printf("4: %-20s $%.2f \n", itemFour, costFour);
+		System.out.printf("5: %-20s $%.2f \n", itemFive, costFive);
 		
 		//Get all of the users money. They dont need it.
 		money = getMoney(scan);
@@ -82,16 +82,17 @@ public class Vend {
 			case "5":
 				calculateCost(money, itemFive, costFive);
 				break;
+			default:
+				break;
 		}
 		
 		//Test to make sure this is working
 		
 	}
 	
-	public static void calculateCost(int convertMoney, String item, float cost) {
-		float money;
+	public static void calculateCost(int money, String item, float cost) {
 		int changeMoney;
-		money = convertMoney / 100;
+		convertMoney = money / 100;
 		if (money < cost) {
 			System.out.println("You entered insufficient funds to purchase "
 					+ "the " + item + ".");
@@ -112,8 +113,9 @@ public class Vend {
 	public static String userChoice (Scanner scan) {
 		int choiceFromUser;
 		String choice = "e";
-		System.out.println("Please enter your selection: ");
+		System.out.print("Please enter your selection: ");
 		choiceFromUser = scan.nextInt();
+		System.out.println("");
 		while ((choiceFromUser > 5) || (choiceFromUser < 1)) {
 			System.out.println("Please enter a valid choice (1-5): ");
 			choiceFromUser = scan.nextInt();
@@ -140,10 +142,11 @@ public class Vend {
 	public static int getMoney (Scanner scan) {
 		int money;
 		System.out.println("");
-		System.out.println("Please enter the amount of money "
+		System.out.print("Please enter the amount of money "
 				+ "deposited (in dollars) : $");
 		
 		money = (int) (scan.nextFloat() * 100);
+		System.out.println("");
 		return money;
 	}
 }
