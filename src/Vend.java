@@ -102,9 +102,9 @@ public class Vend {
 			money = money - costConvert;			
 		}
 		
-		changeMoney = money * 100;
+		money = money * 100;
 		
-		changeMoney = findChange(changeMoney, 25);
+		money = findChange(money, 25);
 	}
 	
 	public static int findChange(int changeMoney, int denomination) {
