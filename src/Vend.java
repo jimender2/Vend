@@ -90,13 +90,21 @@ public class Vend {
 		
 	}
 	
-	public static void calculateCost(int money, String item, float cost) {
+	public static void calculateCost(int changeMoney, String item, float cost) {
 		int costConvert,
 			quarters,
 			dimes,
 			pennies;
 		
-		money = money / 100;
+		double money;
+		
+		System.out.println(changeMoney);
+				
+		money = (changeMoney + 0.0) / 100;
+		
+		System.out.println(money);
+		
+		System.out.println(money);
 		
 		if (money < cost) {
 			System.out.println("You entered insufficient funds to purchase "
@@ -117,7 +125,7 @@ public class Vend {
 		
 	}
 	
-	public static int findChange(int changeMoney, int denomination) {
+	public static int findChange(double changeMoney, int denomination) {
 		int change,
 			quarters,
 			dimes,
@@ -125,26 +133,26 @@ public class Vend {
 		
 		change = 0;
 		
-		//Quarters
-		quarters = changeMoney / 25;
-		changeMoney = changeMoney % 25;
-		
-		//Dimes
-		dimes = changeMoney / 10;
-		changeMoney = changeMoney % 10;
-		
-		//Pennies
-		pennies = changeMoney / 1;
-		
-		if (denomination == 25) {
-			change = quarters;
-		} else if (denomination == 10) {
-			change = dimes;
-		} else if (denomination == 1) {
-			change = pennies;
-		} else {
-			change = 0;
-		}
+//		//Quarters
+//		quarters = changeMoney / 25;
+//		changeMoney = changeMoney % 25;
+//		
+//		//Dimes
+//		dimes = changeMoney / 10;
+//		changeMoney = changeMoney % 10;
+//		
+//		//Pennies
+//		pennies = changeMoney / 1;
+//		
+//		if (denomination == 25) {
+//			change = quarters;
+//		} else if (denomination == 10) {
+//			change = dimes;
+//		} else if (denomination == 1) {
+//			change = pennies;
+//		} else {
+//			change = 0;
+//		}
 		return change;
 	}
 	
