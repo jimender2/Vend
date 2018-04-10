@@ -91,7 +91,11 @@ public class Vend {
 	}
 	
 	public static void calculateCost(int money, String item, float cost) {
-		int costConvert;
+		int costConvert,
+			quarters,
+			dimes,
+			pennies;
+		
 		money = money / 100;
 		
 		if (money < cost) {
@@ -104,11 +108,43 @@ public class Vend {
 		
 		money = money * 100;
 		
-		money = findChange(money, 25);
+		quarters = findChange(money, 25);
+		dimes = findChange(money, 10);
+		pennies = findChange(money, 1);
+		
+		System.out.println("I have returned " + quarters + " quarters, "
+				+ dimes + " dimes, " + pennies + " pennies to you.");
+		
 	}
 	
 	public static int findChange(int changeMoney, int denomination) {
+		int change,
+			quarters,
+			dimes,
+			pennies;
 		
+		change = 0;
+		
+		//Quarters
+		quarters = changeMoney / 25;
+		changeMoney = changeMoney % 25;
+		
+		//Dimes
+		dimes = changeMoney / 10;
+		changeMoney = changeMoney % 10;
+		
+		//Pennies
+		pennies = changeMoney / 1;
+		
+		if (denomination == 25) {
+			change = quarters;
+		} else if (denomination == 10) {
+			change = dimes;
+		} else if (denomination == 1) {
+			change = pennies;
+		} else {
+			change = 0;
+		}
 		return change;
 	}
 	
