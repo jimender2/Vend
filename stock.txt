@@ -1,10 +1,10 @@
-M&Ms
+Starburst
 0.75
-Chips
+Sour Patch
 1.16
-Peppermint gum
+Snickers
 0.32
-Soda
+Reeses
 1.38
-Candy Bar
+Twizzlers
 0.84
